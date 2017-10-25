@@ -10,6 +10,10 @@ RUN sed -i.bak 's/tsflags=nodocs/#&/' /etc/yum.conf \
  && yum -y install git \
  && yum -y install subversion
 
+RUN yum -y install epel-release \
+ && yum -y install python34 \
+ && yum -y install python34-numpy
+
 RUN yum -y install openssh-server \
  && yum -y install sudo \
  && yum -y install wget \
